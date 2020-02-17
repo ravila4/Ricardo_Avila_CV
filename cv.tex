@@ -1,0 +1,57 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/awesome-neue-latex-cv
+%
+% Author:
+% Christophe Roger (Darwiin)
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+
+\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+
+\usepackage{anyfontsize}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\name{Ricardo}{Avila}
+\tagline{Data Science | Structural Bioinformatics}
+%\photo{2.5cm}{darwiin}
+\socialinfo{
+	\linkedin{ravila4}
+	\github{ravila4}
+	\website{https://ravilabio.info/}{ravilabio.info} \\
+	\smartphone{+1 915 267 1895}
+	\email{ravila11@miners.utep.edu}
+	\address{318 High St., Phoenixville, PA 19460, USA}
+}
+
+\begin{document}
+	
+	\makecvheader
+
+	\makecvfooter
+		{\textsc{\selectlanguage{english}\today}}
+		{\textsc{Ricardo Avila - CV}}
+		{\thepage}
+
+	\input{section_headline}
+	\input{section_competences}				% Section compétence
+	\input{section_experience_short}		% Section expérience
+	\input{section_education} 				% Section références
+%	\input{section_projets}
+	\input{section_presentation}
+	\input{section_scolarite}				% Section scholarité
+	\input{section_Extra}
+	%\input{section_interets}				% Section intérêts
+	\input{section_langues}					% Section langues
+
+
+\end{document}
+
+
+
