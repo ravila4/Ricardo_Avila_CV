@@ -1,21 +1,3 @@
-%% Copyright 2016 Christophe Roger
-%
-% Author: 
-% Christophe Roger (Darwiin)
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3c
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-% 
-% The Current Maintainer of this work is M. C. Roger.
-%
-% This work consists of the files awesome-source-cv.cls 
 
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
@@ -56,7 +38,7 @@
 
 % Dependences
 %A Few Useful Packages
-\RequirePackage[english,french]{babel}
+\RequirePackage[english]{babel}
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec} 					                 % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
@@ -78,7 +60,7 @@
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
-\definecolor{basecolor}{HTML}{001f3f}       %NAVY
+\definecolor{basecolor}{HTML}{333333}  %header color
 
 \ifundef{\@green} {
   \ifundef{\@red} {
@@ -166,15 +148,13 @@
 \newlength{\leftcolumn}
 \setlength{\leftcolumn}{2.5cm}
 
-% Font Awesome icons aliases
-\newcommand{\mailSymbol}{\faAt}
+% Font Awesome icons aliases\faIcon{home}
+\newcommand{\mailSymbol}{\faEnvelope}
 \newcommand{\locationSymbol}{\faMapMarker}
-\newcommand{\infoSymbol}{\faInfo}
 \newcommand{\linkedinSymbol}{\faLinkedin}
 \newcommand{\githubSymbol}{\faGithub}
-\newcommand{\viadeoSymbol}{\faViadeo}
 \newcommand{\mobileSymbol}{\faMobilePhone}
-\newcommand{\researchgateSymbol}{\faresearchgate}
+%\newcommand{\orcidSymbol}{\faOrcid} - Not working
 
 \newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
 \newcommand\important[1]{\textbf #1}
@@ -237,19 +217,23 @@
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}
 
+%\newcommand*{\orcid}[1]{\sociallink{\orcidSymbol}{https://orcid.org/#1}{orcid.org/#1}}
+
 \newcommand*{\researchgate}[1]{\sociallink{\researchgateSymbol}{https://https://www.researchgate.net/in/#1}{researchgate.net/profile/#1}}           % Researchgate + URL
 
 % Render author's email (optional)
-% Usage: \email{<email adress>}
+% Usage: {<email adress>}
 \newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
 
 % Render a website link (optional)
 % Usage: \email{<email adress>}
-\newcommand*{\website}[2]{\sociallink{\faExternalLink}{#1}{#2}}
+\newcommand*{\website}[2]{\sociallink{\faHome}{#1}{#2}}
 
 % Render author's mobile phone (optional)
 % Usage: \smartphone{<mobile phone number>}
-\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
+\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
+
+%\newcommand*\orcid[1]{\socialtext{\orcidSymbol}{#1}} 
 
 % Render author's tagline
 \newcommand\resumetitle[1]{
@@ -427,7 +411,7 @@
   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
     \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
     #3\\
-    \footnotesize{\foreach \n in {#4}{\cvtag{\n}}}\\
+    \footnotesize{\foreach \n in {#4}{\n}}\\
   \end{minipage}
   \\*
 }
