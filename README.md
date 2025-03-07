@@ -2,8 +2,7 @@ Ricardo Avila's CV
 =================
 
 > [!NOTE]
-> This is my personal CV, based on the YAAC: Yet Another Awesome CV template.
-> It contains several modifications, such as updating to use Fontawesome 5 icons, and adding a new section for publications.
+> This is my personal CV, based on the YAAC: Yet Another Awesome CV template by Christophe Roger.
 
 You can get and edit the original **YAAC: Another Awesome CV** template on [Overleaf](https://www.overleaf.com/latex/templates/awesome-source-cv/wrdjtkkytqcw).
 
