@@ -56,7 +56,7 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
-\RequirePackage{fontawesome}
+%\RequirePackage{fontawesome}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
 \RequirePackage{array}
@@ -164,7 +164,7 @@
 \newcommand{\locationSymbol}{\faMapMarker}
 \newcommand{\linkedinSymbol}{\faLinkedin}
 \newcommand{\githubSymbol}{\faGithub}
-\newcommand{\mobileSymbol}{\faMobilePhone}
+\newcommand{\mobileSymbol}{\faPhone}
 %\newcommand{\orcidSymbol}{\faOrcid} - Not working
 
 \newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
@@ -349,14 +349,14 @@
 % Define the 'skills' environment
 \newenvironment{skills}{%
   \begin{longtable}{R{\leftcolumn}p{\rightcolumnlength}}
-}{%
+}{
   \end{longtable}
 }
 
 % Render a skill in the skills environment
 % Usage: \skill{<skill>}{<level>}
 \newcommand\skill[2]{
-  \textbf{#1}    & \foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircleThin}{\faCircle}}\enspace } \\
+  \textbf{#1} & \raisebox{-0.2em}{\foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircleThin}{\faCircle}}\enspace }} \\
 }
 
 \newcolumntype{E}{>{\raggedright\arraybackslash}p{\rightcolumnlength}}
