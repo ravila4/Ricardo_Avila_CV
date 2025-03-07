@@ -40,7 +40,7 @@
 %A Few Useful Packages
 \RequirePackage[english]{babel}
 \RequirePackage[utf8]{luainputenc}
-\RequirePackage{fontspec} 					                 % for loading fonts
+\RequirePackage{fontspec}         % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
@@ -50,7 +50,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{array}
 \RequirePackage{enumitem}
-\RequirePackage{longtable} 	
+\RequirePackage{longtable}
 \RequirePackage{etoolbox}
 \RequirePackage{tikz}
 \RequirePackage[skins]{tcolorbox}
@@ -113,8 +113,8 @@
 \titlespacing{\section}{0pt}{2pt}{2pt}
 
 % Configure list
-\setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
-\setlist[itemize,2]{label=\faAngleRight, nosep, leftmargin=1.5em} 
+\setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em}
+\setlist[itemize,2]{label=\faAngleRight, nosep, leftmargin=1.5em}
 
 % Setup Array : new column type
 \newcolumntype{R}[1]{>{\hfill}m{#1}}
@@ -131,13 +131,13 @@
 {
   %\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
   \setmainfont{Source Sans Pro Light}[
-    BoldFont = SourceSansPro-Regular, 
+    BoldFont = SourceSansPro-Regular,
     ItalicFont= Source Sans Pro Light Italic]
 }
 {
   \setmainfont{SourceSansPro-Light}[
-    Path = fonts/, 
-    BoldFont = SourceSansPro-Regular, 
+    Path = fonts/,
+    BoldFont = SourceSansPro-Regular,
     ItalicFont = SourceSansPro-LightIt]
 }
 
@@ -211,7 +211,7 @@
 
 % Render author's viadeo(optional)
 % Usage: \viadeo{<viadeo-nick>}
-\newcommand*{\viadeo}[1]{\sociallink{\viadeoSymbol}{http://www.viadeo.com/fr/profile/#1}{viadeo.com/fr/profile/#1}} 
+\newcommand*{\viadeo}[1]{\sociallink{\viadeoSymbol}{http://www.viadeo.com/fr/profile/#1}{viadeo.com/fr/profile/#1}}
 
 % Render author's github (optional)
 % Usage: \github{<github-nick>}
@@ -233,7 +233,7 @@
 % Usage: \smartphone{<mobile phone number>}
 \newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
 
-%\newcommand*\orcid[1]{\socialtext{\orcidSymbol}{#1}} 
+%\newcommand*\orcid[1]{\socialtext{\orcidSymbol}{#1}}
 
 % Render author's tagline
 \newcommand\resumetitle[1]{
@@ -308,7 +308,7 @@
 \newenvironment{keywords}{%
   \renewcommand{\arraystretch}{1.1}
 
-  \begin{tabular}{>{}r>{}p{13cm}} 
+  \begin{tabular}{>{}r>{}p{13cm}}
 }{%
   \end{tabular}
 }
@@ -316,7 +316,7 @@
 % Render a scholarshipentry in the scolarship environment
 % Usage: \scholarshipentry{<date>}{<description>}
 \newcommand\keywordsentry[2]{
-  \textbf{#1} &   #2\\ 
+  \textbf{#1} &   #2\\
 }
 
 % Define a new column type for the scholarship environment
@@ -358,7 +358,7 @@
 }
 
 % Render an experience in the experiences environment
-% Usage: 
+% Usage:
 % \experience
 %  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
 %  {<Start date}     {
@@ -370,11 +370,11 @@
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
                    \end{minipage}										\\*
-                 
+
   }
 
 % Render a consultant experience in the experiences environment
-% Usage: 
+% Usage:
 % \consultantexperience
 %  {<End date>}      {<Consultant title>}{<Consulting Enterprise>}{<Country>}
 %  {<Start date}     {<Client title>}{<Client business unit>}
@@ -396,7 +396,7 @@
 % Define the 'projects' environment
 \newenvironment{projects}{%
   \begin{longtable}{l}
-}{%
+}{
   \end{longtable}
 }
 
