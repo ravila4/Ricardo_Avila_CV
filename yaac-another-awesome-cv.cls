@@ -53,6 +53,7 @@
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec}         % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
 \RequirePackage{fontawesome}
@@ -70,7 +71,7 @@
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
-\definecolor{basecolor}{HTML}{333333}  % Header color
+\definecolor{basecolor}{HTML}{23384f}  % Header color
 
 \ifundef{\@green} {
   \ifundef{\@red} {
