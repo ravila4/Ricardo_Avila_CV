@@ -1,3 +1,14 @@
+% YAAC Another Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/yaac-another-awesome-cv
+%
+% Author:
+% Christophe Roger
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
 
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
@@ -42,7 +53,6 @@
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec}         % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
-\RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
 \RequirePackage{fontawesome}
@@ -60,7 +70,7 @@
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
-\definecolor{basecolor}{HTML}{333333}  %header color
+\definecolor{basecolor}{HTML}{333333}  % Header color
 
 \ifundef{\@green} {
   \ifundef{\@red} {
@@ -73,7 +83,7 @@
     }
     { \definecolor{basecolor}{rgb}{0.2, 0.07, 0.48} }
   }
-  { \definecolor{basecolor}{HTML}{b30000} }     %RED
+  { \definecolor{basecolor}{HTML}{b30000} }     % RED
 }
 { \definecolor{basecolor}{rgb}{0.0, 0.62, 0.38} }
 
@@ -84,17 +94,17 @@
 \colorlet{symbolcolor}{linkcolor!85}
 
 % Setup hyperref package, and colours for links
-%\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+% \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 
 \if@showLinks
-  \hypersetup{%
+  \hypersetup{
     breaklinks
-  }%
+  }
 \else
-  \hypersetup{%
+  \hypersetup{
     pdfborder = {0 0 0},
     breaklinks
-  }%
+  }
 \fi
 
 % Setup fancyhdr package
@@ -123,7 +133,7 @@
 \hyphenation{im-pre-se}
 
 % Setup fonts
-\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Ligatures=TeX}
 %
 
 % Define font to use according to localFont option
@@ -439,7 +449,7 @@
     \begin{tabular}{>{}l >{}l}
       \multicolumn{2}{l}{\textbf{#1}}\\
       \multicolumn{2}{l}{\emph{#2}, \textsc{#3}}\\
-      \quad  & \href{mailto:#4}{#4} \\  
+      \quad  & \href{mailto:#4}{#4} \\
       \quad & #5 \\
     \end{tabular}
   \end{minipage}%
