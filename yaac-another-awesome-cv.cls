@@ -334,9 +334,9 @@
 \newcolumntype{Y}{>{\raggedleft}p{\leftcolumn}}
 
 % Define the 'scholarship' environment
-\newenvironment{scholarship}{%
-  \begin{tabular}{Y p{\rightcolumnlength}}
-}{%
+\newenvironment{scholarship}{
+  \begin{tabular}{p{1cm} p{\dimexpr\textwidth-1.6cm}}
+}{
   \end{tabular}
 }
 
@@ -347,7 +347,7 @@
 }
 
 % Define the 'skills' environment
-\newenvironment{skills}{%
+\newenvironment{skills}{
   \begin{longtable}{R{\leftcolumn}p{\rightcolumnlength}}
 }{
   \end{longtable}
@@ -356,7 +356,7 @@
 % Render a skill in the skills environment
 % Usage: \skill{<skill>}{<level>}
 \newcommand\skill[2]{
-  \textbf{#1} & \raisebox{-0.2em}{\foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircleThin}{\faCircle}}\enspace }} \\
+  \textbf{#1} & \raisebox{0em}{\foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircleThin}{\faCircle}}\enspace }} \\
 }
 
 \newcolumntype{E}{>{\raggedright\arraybackslash}p{\rightcolumnlength}}
